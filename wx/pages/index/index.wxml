@@ -1,0 +1,65 @@
+<!-- 轮播图 -->
+<!-- <view class='swiper'>
+  <scroll-view class='swiper-container' scroll-x="true">
+    <image src='{{image_url}}'></image>
+    <image src='{{image_url}}'></image>
+  </scroll-view>
+</view> -->
+
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-active-color="white"
+>
+    <block wx:for="{{image_url}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+  </block>
+</swiper>
+
+<!-- <van-tabs active="{{ active }}" bind:change="onChange">
+
+  <van-tab title="新歌榜">  
+  <!-- <block wx:for='{{musics}}'>
+    <block wx:for='{{item}}'>
+    <van-cell
+      title="以父之名"
+      value="周杰伦"
+      icon="play-circle-o"
+      border="{{ true }}"
+    />
+    </block>
+  </block> -->
+  <!-- </van-tab>
+  <van-tab title="飙升榜">飙升榜</van-tab>
+  <van-tab title="热歌榜">热歌榜</van-tab>
+  <van-tab title="原创榜">原创榜</van-tab> -->
+<!-- </van-tabs> --> 
+
+
+<van-tabs swiper animated swipeable="true" active="{{ active }}" bind:change="onChange">
+<block wx:for='{{musics.data}}' wx:for-item="foo">
+<van-tab title="{{foo.tag_name}}">
+  <block wx:for="{{foo.detail}}"> 
+    <van-cell
+      title="{{item.songname}}"
+      value="{{item.singer}}"
+      icon="play-circle-o"
+      clickable="true"
+      bindtap='toplay'
+      data-lyric="{{item.lyric}}"
+      data-imageurl="{{item.image_url}}"
+      data-url="{{item.url}}"
+      data-songname="{{item.songname}}"
+      data-singer="{{item.singer}}"
+    />
+  </block>
+</van-tab>
+</block>
+</van-tabs>
+
+
+

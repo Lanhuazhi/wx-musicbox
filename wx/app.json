@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/playing/playing"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "音乐分享",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "text": "在线音乐",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icons/online.png",
+        "selectedIconPath": "images/icons/online-s.png"
+      },
+      {
+        "text": "正在播放",
+        "pagePath": "pages/playing/playing",
+        "iconPath": "images/icons/playing.png",
+        "selectedIconPath": "images/icons/playing-s.png"
+      }
+    ],
+    "borderStyle": "white"
+  }
+}

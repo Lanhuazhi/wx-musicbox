@@ -1,0 +1,103 @@
+/* pages/playing/playing.wxss */
+body{
+  background-image: url("/images/109951163609743240.jpg")
+}
+
+.container{
+  height: 100vh;
+  text-align: center;
+}
+
+.out{
+  position: absolute;
+  top:10vh
+}
+
+.music{
+  background: white;
+  width: 350rpx;
+  height:400rpx; 
+  padding: 30rpx 0 0 0;
+  margin: 0 200rpx;
+  overflow: hidden;
+  position: relative
+}
+
+.music image{
+  margin: 0 auto;
+  width: 200rpx;
+  height:200rpx;
+  border-radius:50%;
+}
+
+@keyframes imageCircle
+{
+    0%   {transform: rotateZ(0deg)}
+    100% {transform: rotateZ(360deg)}
+}
+
+text{
+  display: block;
+  margin: 30rpx 30rpx;
+}
+
+.music text{
+  font-size: 30rpx 
+}
+
+
+.on image{
+  margin-top: 100rpx;
+  width: 120rpx;
+  height: 120rpx
+}
+
+.stop image{
+  margin-top: 115rpx;
+  width: 100rpx;
+  height: 100rpx
+}
+
+.swiper-container{
+  height: 650rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bz{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  opacity: 0.1
+}
+
+.bar{
+  position: absolute;
+  bottom: 5rpx;
+  left: -100%;
+  width: 100%;
+  height: 8rpx;
+  transition: all 1s linear;
+  background-color: #7cc7af
+}
+
+.lyric{
+  margin-top: 50rpx;
+  margin-left: -45%;
+  position: absolute;
+  scroll-snap-points-y: hidden;
+  left: 50%;
+  width: 90%;
+  padding: 2rpx; 
+}
+
+/* 隐藏滚动条框 */
+::-webkit-scrollbar{
+  width:0;
+  height: 0;
+  color: transparent
+}
+
+#lc{
+  color: #7cc7af;
+}

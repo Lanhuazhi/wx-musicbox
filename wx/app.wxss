@@ -1,0 +1,15 @@
+
+
+
+/**app.wxss**/
+
+@import 'dist/common/index.wxss';
+
+.container {
+  height: 100%;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+      } 
+
+
+

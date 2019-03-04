@@ -1,0 +1,45 @@
+<!-- 正在播放 -->
+<view class='container'>
+    <image class="bz" src='{{imageurl}}'></image>
+    <view class='out'>
+      <view class="music">
+          <image 
+          src='{{imageurl}}' 
+          style='animation: {{imageRotate}} 30s infinite'
+          ></image> 
+          <text>{{songname}}</text>
+          <text> {{singer}}</text>
+          <view class='bar' style='transform:translateX({{sliderValue}}%)'>
+          </view>
+          <!-- <van-progress
+            class='bar'
+            color="#f2826a"
+            percentage="20"
+          /> -->
+
+          
+      </view> 
+      <view class='{{name}}'>
+          <image bindtap='onplay' src='{{playicon}}'></image>
+      </view> 
+      
+      <scroll-view
+        class="lyric"
+        scroll-y="true"
+        style='height:250rpx'
+        scroll-top ="{{top}}"
+        bindscrolltolower="lower"
+      > <view id="lc">
+      <block wx:for="{{lyricShow}}">
+        <view 
+        style='color:{{currentIndex == index?currentColor:""}};font-size:{{currentIndex == index?currentFontSize:"30rpx"}}'
+        id="{{index}}"
+        >
+         <text decode='{{true}}'>{{item.lcontent}}</text>
+        </view>
+        </block>
+         </view>
+        </scroll-view>
+    </view>
+</view>
+
