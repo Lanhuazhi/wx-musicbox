@@ -16,4 +16,8 @@
   
 
 ### 项目截图
+![image](https://github.com/Lanhuazhi/wx-musicbox/blob/master/image/1.jpg)
 
+![image](https://github.com/Lanhuazhi/wx-musicbox/blob/master/image/2.png)
+
+      
